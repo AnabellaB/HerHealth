@@ -1,0 +1,105 @@
+import java.util.Scanner;
+
+
+public class hackathon {
+
+    static Scanner scanIn = new Scanner(System.in);
+
+    public static void uti() {
+        System.out.println("UTI's, urinary tract infections, are very common for women. A UTI is a bacterial infection of the urinary system.");
+        System.out.println("Symptoms");
+        System.out.println("1. Burning sensation during and/or after directly after urination");
+        System.out.println("2. Murky pee");
+        System.out.println("3. Peeing blood");
+
+        System.out.println("How to prevent:");
+        System.out.println("1. Pee after sex with your partner");
+        System.out.println("2. Wipe front to back after urination");
+        System.out.println("3. Make sure all objects/products in contact with the vagina are sanitary");
+
+        System.out.println("How to treat:");
+        System.out.println("Schedule an appointment with a doctor immediately if you think you have a UTI");
+        System.out.println("UTI's can be treated with antibiotics and resolve within 5-7 days; however, left untreated, the infection can spread to kidneys and other parts of the body");
+        System.out.println("Take AZO (over the counter) capsules to ease symptoms");
+
+    }
+
+    public static void pee() {
+        String[] peeOpts = new String[]{"color/type", "pain", "frequency", "smell"};
+        for (int i = 0; i < peeOpts.length; i++) {
+            System.out.println(peeOpts[i]);
+        }
+        System.out.println("Enter");
+        String input = scanIn.nextLine();
+
+        if (input.equalsIgnoreCase("pain")) {
+            System.out.println("UTI (Urinary Tract Infection)");
+            System.out.println("Chlamydia");
+            System.out.println("Vaginitis");
+        }
+
+        if (input.equalsIgnoreCase("color")) {
+            System.out.println("pick a color");
+            System.out.println("yellow");
+            System.out.println("murky");
+            System.out.println("clear");
+            System.out.println("green");
+            System.out.println("blue");
+            System.out.println("red/brown");
+
+            System.out.println("Enter");
+            input = scanIn.nextLine();
+
+            if (input.equalsIgnoreCase("green")) {
+                System.out.println("Causes");
+                System.out.println("Blue/Green Colored Dye");
+                System.out.println("UTI (Urinary Tract Infection)");
+                System.out.println("Medications");
+                System.out.println("Enter");
+                input = scanIn.nextLine();
+
+                if (input.equalsIgnoreCase("UTI")) {
+                    uti();
+                } else {
+                    //blue();
+                }
+
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] bodyParts = new String[]{"head", "neck", "chest", "breasts", "arms", "stomach", "vagina", "legs"};
+
+        //input age
+        System.out.println("Enter your age");
+        int age = scanIn.nextInt();
+
+        //input part
+        for (int i = 0; i < bodyParts.length; i++) {
+            System.out.println(bodyParts[i]);
+        }
+
+        System.out.println("Enter a body part:");
+        scanIn = new Scanner(System.in);
+        String part = scanIn.nextLine();
+
+        if (part.equalsIgnoreCase("vagina")) {
+
+            System.out.println("Pee");
+            System.out.println("Pain");
+            System.out.println("Periods");
+            System.out.println("STDs/STIs");
+            System.out.println("Itchiness");
+            System.out.println("Discharge");
+            System.out.println("Enter an option:");
+            String str = scanIn.nextLine();
+
+            if (str.equalsIgnoreCase("pee")) {
+                pee();
+            }
+
+        }
+
+    }
+}
