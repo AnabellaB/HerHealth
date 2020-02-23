@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class WomHealthEx {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        System.out.print("What part of your body are you concerned about? \n");
+        String bodypart = myObj.nextLine();
+        if(bodypart.equals("Vagina"))
+        {
+            Vag();
+        }
+    myObj.close();
+}
+    public static void Vag()
+    {
+        Scanner myObj = new Scanner(System.in);
+        System.out.print("Is your concern related to which of the following:\n" + "pee\n" +  "pain\n" +  "STD/STI\n" + "itchy\n");
+        String selection1 = myObj.nextLine();
+        if(selection1.equals("STD/STI") || selection1.equals("STD") || selection1.equals("STI"))
+        {
+            STDs();
+        }
+        else
+            System.out.print("Invalid Input");
+
+        myObj.close();
+    }
+    public static void STDs()
+    {
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Choose one from the list: ");
+        System.out.println("Gonorrhea");
+        System.out.println("Human Papilloma Virus (HPV)");
+        System.out.println("Genital herpes");
+        System.out.println("HIV/AIDS");
+        System.out.println("Syphilis");
+        System.out.println("Craps/Pubic Lice");
+        String selection1 = myObj.nextLine();
+        if(selection1.equals("Gonorrhea"))
+        {
+            Gonn();
+        }
+        if(selection1.equals("Genital herpes") || selection1.equals("herpes"))
+        {
+            Herps();
+        }
+        else
+            System.out.println("Invalid input");
+
+    }
+    public static void Gonn()
+    {
+        System.out.println("It is an infection caused by a sexually transmitted bacterium that infects both males and females.");
+        System.out.println("Short-term: resolves within days to weeks. Can be treated with antibiotics such as ceftriaxone, azithromycin, and doxycycline.");
+        System.out.println("Symptoms of gonorrhea include burning when urinating and, in men, white, yellow, or green discharge from the penis." +
+                "Hoewever, many people with gonorrhea don't have symptoms. That is why it is important to get tested for these diseases  at your local clinic.");
+    }
+
+    public static void Herps()
+    {
+        System.out.println("It is an infection caused by the herpes simplex virus, can affect both men and women.");
+        System.out.println("After initial infection, genital herpes lies dormant in the body. Treatment can help, but this condition can't be cured. Symptoms can recur for years.");
+        System.out.println("Symptoms include pain, itching, and small sores first, which will form ulcers and scabs. Also common are genital sores, sensation of pins and needles, or skin rash");
+
+    }
+}
